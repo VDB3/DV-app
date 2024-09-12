@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
-public class RequestDataProcessor {
+public class MailDataProcessor {
 
     private static final String EMAIL_REGEX =
             "^[a-z0-9_+&*-]+(?:\\.[a-z0-9_+&*-]+)*@[a-z0-9-]+(?:\\.[a-z0-9-]+)*\\.[a-z]{2,7}$";
@@ -19,7 +19,7 @@ public class RequestDataProcessor {
             return new EmailValidationResult(false, ConstantsUtil.ValidationProcessor.NULL);
         }
 
-        if (email.contains(ConstantsUtil.ValidationProcessor.SPACE)) {
+        if (email.contains(ConstantsUtil.ValidationProcessor.SPACE_CHARACTER)) {
             return new EmailValidationResult(false, ConstantsUtil.ValidationProcessor.CONTAIN_SPACE);
         }
 

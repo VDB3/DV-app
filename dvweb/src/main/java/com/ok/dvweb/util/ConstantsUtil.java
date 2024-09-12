@@ -10,7 +10,7 @@ public class ConstantsUtil {
         public static final String CONTAIN_UPPER = "El correo electrónico no puede contener mayúsculas.";
         public static final String INVALID_FORMAT = "El correo electrónico tiene un formato inválido. " +
                 "Asegúrate de que siga el formato general: usuario@dominio.tld.";
-        public static final String SPACE = " ";
+        public static final String SPACE_CHARACTER = " ";
     }
 
     // Constantes relacionadas con el acceso de los endpoints

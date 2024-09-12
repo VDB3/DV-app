@@ -1,6 +1,6 @@
 package com.ok.dvweb.controller;
 
-import com.ok.dvweb.component.RequestDataProcessor;
+import com.ok.dvweb.component.MailDataProcessor;
 import com.ok.dvweb.component.sub.EmailValidationResult;
 import com.ok.dvweb.controller.payload.SubscriberRequest;
 import com.ok.dvweb.controller.payload.sub.ErrorResponse;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SubscriberController {
 
     protected final SubscriberService service;
-    protected final RequestDataProcessor dataProcessor;
+    protected final MailDataProcessor dataProcessor;
 
     @PostMapping("/subscriber")
     public ResponseEntity<?> subscriberAdd(@RequestBody SubscriberRequest sub) {
