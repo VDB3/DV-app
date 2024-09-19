@@ -17,11 +17,13 @@ public class ConstantsUtil {
     public static class Security {
         public static final String[] WHITE_LIST = {
                 "/actuator/health",
-                "/actuator/info"
+                "/actuator/info",
+                "/news"
         };
         public static final String[] WHITE_LIST_OMIT = {
                 "/subscriber",
-                "/contact"
+                "/contact",
+                "/update"
         };
     }
 
