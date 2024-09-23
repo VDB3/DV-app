@@ -1,22 +1,8 @@
 package com.ok.dvweb.config;
 
-import com.ok.dvweb.util.ConstantsUtil;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-@Configuration
-@EnableWebSecurity
 public class SecurityConfig {
-
+/*
     @Bean
     @Order(0)
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -25,7 +11,7 @@ public class SecurityConfig {
                         .configurationSource(corsConfigurationSource())
                 )
                 .csrf(csrf -> csrf
-                        .ignoringRequestMatchers(ConstantsUtil.Security.WHITE_LIST_OMIT) // Ignorar CSRF para rutas específicas
+                        .ignoringRequestMatchers(ConstantsUtil.Security.WHITE_LIST_OMIT)
                 )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(ConstantsUtil.Security.WHITE_LIST_OMIT).permitAll()
@@ -55,8 +41,8 @@ public class SecurityConfig {
         configuration.setAllowCredentials(true); // Permitir el envío de cookies o credenciales
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration); // Aplicar la configuración CORS a todas las rutas
+        source.registerCorsConfiguration("/**", configuration);
 
         return source;
-    }
+    }*/
 }

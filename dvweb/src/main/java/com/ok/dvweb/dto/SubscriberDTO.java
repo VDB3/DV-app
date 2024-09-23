@@ -15,4 +15,6 @@ public class SubscriberDTO {
         this.created = LocalDateTime.now();
         this.notify = 0;
     }
+
+
 }

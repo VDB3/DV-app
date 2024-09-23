@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -29,4 +30,7 @@ public class Subscriber {
 
     @Column(name = "verify", nullable = false)
     private boolean verify;
+
+    @Column(name = "uuid", nullable = false)
+    private String uuid;
 }

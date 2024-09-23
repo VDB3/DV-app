@@ -7,6 +7,6 @@ public class ProspectusRequest {
 
     private String username;
     private String mail;
-    private int phone;
+    private String phone;
     private String message;
 }

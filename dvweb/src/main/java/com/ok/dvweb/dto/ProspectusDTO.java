@@ -8,7 +8,7 @@ public class ProspectusDTO {
 
     private String username;
     private String mail;
-    private int phone;
+    private String phone;
     private String message;
 
     public ProspectusDTO(ProspectusRequest request) {

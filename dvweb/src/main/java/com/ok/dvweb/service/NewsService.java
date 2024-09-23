@@ -1,8 +1,7 @@
 package com.ok.dvweb.service;
 
-import com.ok.dvweb.dto.NewsDTO;
-import com.ok.dvweb.entity.News;
-import com.ok.dvweb.repository.NewsRepository;
+import com.ok.dvweb.entity.Subscriber;
+import com.ok.dvweb.repository.SubscriberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,21 +11,16 @@ import java.util.List;
 @RequiredArgsConstructor
 public class NewsService {
 
-    protected final NewsRepository repository;
+    protected final SubscriberRepository repository;
+    protected final MessagingService messagingService;
 
-    public void saveNews(NewsDTO dto){
-        repository.save(mapToEntity(dto));
+    public void notifySubs(String imgBase64){
+        List<Subscriber> subscriberList = repository.findAll();
+        List<String> listMail = subscriberList.stream()
+                .filter(Subscriber::isVerify)
+                .map(Subscriber::getMail)
+                .toList();
+        messagingService.sendNotifySubsVerified(listMail, imgBase64);
     }
 
-    public List<News> findAllNews(){
-        return repository.findAll();
-    }
-
-    private News mapToEntity(NewsDTO dto){
-        News entity = new News();
-        entity.setTittle(dto.getTittle());
-        entity.setDescription(dto.getDescription());
-        entity.setImage(dto.getImage());
-        return entity;
-    }
 }

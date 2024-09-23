@@ -4,7 +4,6 @@ import com.ok.dvweb.controller.payload.ProspectusRequest;
 import com.ok.dvweb.controller.payload.sub.ErrorResponse;
 import com.ok.dvweb.dto.ProspectusDTO;
 import com.ok.dvweb.service.MessagingService;
-import com.sendgrid.Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
